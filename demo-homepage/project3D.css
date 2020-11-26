@@ -1,0 +1,89 @@
+
+
+
+#main-project3D{
+  
+    position: relative;
+      
+    /* width: 100%; */
+      
+    height: 500px;
+      
+    background: radial-gradient(45deg, #06f10d, #ff00008c);
+      
+    /* height: 3; */
+      
+    border: 10px solid #7ff910;
+      
+    border-radius: 50%;
+      
+    background-blend-mode: screen;
+      
+    background: radial-gradient(#ff0000, #20ff05);
+      
+    /* padding: 44px 5px; */
+      
+    }
+                
+                #main-project3D .wrapper3D{
+                    position: absolute;
+                    top: calc(50% - 85px);
+                    left: calc(50% - 100px);
+                    width: 200px;
+                    height: 200px;
+                    transform-style: preserve-3d;
+                    animation: project3D 4s cubic-bezier(0.64, 0.14, 0.51, 1.23) infinite;
+                }
+                .wrapper3D  div{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    transform-style: preserve-3d;
+                    transform: rotateX(-20deg) rotateY(25deg) translate3d(-75px,-50px, 150px) ;
+                   
+                 
+                
+                }
+                .wrapper3D  div span{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    border: 3px solid rgba(0,0,0,.1);
+                    border-radius: 0px;
+                    background-color: #00000080;
+                }
+                .wrapper3D  div span img{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .wrapper3D  div span:nth-child(1){
+                    transform: rotateX(0deg) translate3d(0,0,100px);
+                }
+                
+                .wrapper3D  div span:nth-child(2){
+                    transform: rotateY(90deg) translate3d(0,0,-100px);
+                }
+                
+                .wrapper3D  div span:nth-child(3){
+                    transform: rotateX(90deg) translate3d(0,0,100px);
+                }
+                @keyframes project3D{
+                    0%{/* transform: rotateX(0deg); */}
+                    25%{transform: translateX(-83px);}
+                    40%{transform: rotateX(21deg);}
+                    50%{transform: translateX(166px);}
+                    60%{transform: rotateY(48deg);}
+                    75%{transform: scale(1.3);}
+                    80%{/* transform: rotateX(-57deg); */}
+                    100%{transform: rotateY(0deg);}
+                }
